@@ -1,73 +1,45 @@
-@media (max-width: 1100px){
-    :root{
-        --max-widht: 900px;
-    }
-
-    footer .block img{
-        display: none;
-    }
-    footer .block .box{
-        width: 100%;
-    }
-    main .block-template.flex .block{
-        width: calc(100% / 3 - 20px);
-    }
-    main .block-template.flex .block img{
-        width: 100%;
-    }
-}
-
-@media (max-width: 900px) {
-    :root{
-        --max-widht: 700px;
-    }
-    main .block-template{
-        flex-wrap: wrap;
-    }
-    main .block-template.flex .block{
-        width: calc(100%/2 - 30px);
-    }
-    main .bg-img .block .flex{
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 30px;
-    }
-    main .block-template .text.hightline{
-        max-width: 90%;
-        margin: auto;
-    }
-    main .bg-img{
-        height: auto;
-    }
-    main .block-template.bike img{
-        height: auto;
-    }
-    main .bg{
-        height: calc(var(--max-widht) * 0.8);
-    }
-}
-
-@media (max-width:700px) {
-    :root{
+@media (max-width: 700px) {
+    :root {
         --max-widht: 500px;
     }
-    header .block .hotbar{
+    
+    header .block .hotbar {
         display: none;
     }
-    .menu{
+    
+    header .block .hotbar.active {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;     
+        position: absolute;
+        top: 50px;
+        right: 0;
+        width: fit-content;          
+        background-color: white;
+        padding: 15px 20px;          
+        gap: 15px;                   
+        box-shadow: -5px 10px 15px rgba(0,0,0,0.1); 
+        border-bottom-left-radius: 15px; 
+    }
+
+    .menu {
         display: block;
         font-size: 40px;
         margin-right: 30px;
         cursor: pointer;
+        line-height: 50px;
+        user-select: none;
     }
-    main .block-template img{
+    
+    main .block-template img {
         width: calc(100% - 30px);
     }
 
-    main .block-template{
+    main .block-template {
         flex-direction: column;
     }
-    main .block-template.flex .block{
+    
+    main .block-template.flex .block {
         width: 70%;
     }
 }
